@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gray {
+  color: #918e98;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bold {
+  font-weight: bold;
+}
+
+nav {
+  height: 70px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 36px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.nav--logo {
+  max-width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+section {
+  padding: 20px;
+}
+
+.cards--list {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: space-around;
+  overflow-x: auto;
+}
+.card {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card--image {
+  width: 125px;
+  height: 168px;
+  border-radius: 9px;
+  margin-bottom: 9px;
+  margin-right: 20px;
+}
+
+.card--stats {
+  display: block;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card--star {
+  height: 12px;
+  object-fit: contain;
+}
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--desc {
+  width: 326px;
+  margin-top: -1px;
+}
+
+.card--map {
+  margin-left: 10px;
+  font-weight: 400;
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.card--location {
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: Poppins;
+}
+
+.top-head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  margin-top: -2px;
+  font-weight: 700;
+  font-size: 25px;
+}
+.thin {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1050px) {
+  .cards--list {
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 650px) {
+  .cards--list {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card--image {
+    width: 100%;
+    height: 50vh;
   }
 }
