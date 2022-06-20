@@ -118,6 +118,12 @@ h1 {
   font-weight: 600;
 }
 
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 1050px) {
   .cards--list {
     display: grid;
